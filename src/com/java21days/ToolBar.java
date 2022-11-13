@@ -1,4 +1,7 @@
 package com.java21days;
 
-public class ToolBar {
+import javax.swing.*;
+
+public class ToolBar extends JFrame {
+
 }
