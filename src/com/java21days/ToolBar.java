@@ -18,6 +18,9 @@ public class ToolBar extends JFrame {
         );
         panel.add(scrollPane);
 
+        JToolBar toolBar = new JToolBar();
+
+
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(panel);
