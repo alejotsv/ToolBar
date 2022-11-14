@@ -34,7 +34,9 @@ public class ToolBar extends JFrame {
         JButton[] buttons = new JButton[icons.length];
         for(int i=0; i<icons.length; i++){
             ImageIcon icon = new ImageIcon(getClass().getResource("res/" + icons[i]));
-            JButton btn = new JButton(icons[i], icon);
+            String text = icons[i].split("\\.")[0];
+            String finalText= text.replaceFirst(text.substring(0,1), text.substring(0,1).toUpperCase());
+            JButton btn = new JButton(finalText, icon);
             buttons[i] = btn;
         }
         return buttons;
