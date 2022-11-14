@@ -19,13 +19,31 @@ public class ToolBar extends JFrame {
         panel.add(scrollPane);
 
         JToolBar toolBar = new JToolBar();
-
+        JButton[] buttons = createButtons(icons);
+        addButtonsToToolBar(toolBar, buttons);
+        panel.add(toolBar);
 
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(panel);
         setVisible(true);
         pack();
+    }
+
+    JButton[] createButtons(String[] icons){
+        JButton[] buttons = new JButton[icons.length];
+        for(int i=0; i<icons.length; i++){
+            ImageIcon icon = new ImageIcon(getClass().getResource("res/" + icons[i]));
+            JButton btn = new JButton(icons[i], icon);
+            buttons[i] = btn;
+        }
+        return buttons;
+    }
+
+    void addButtonsToToolBar(JToolBar toolBar, JButton[] buttons){
+        for(int i=0; i<buttons.length; i++){
+            toolBar.add(buttons[i]);
+        }
     }
 
 }
