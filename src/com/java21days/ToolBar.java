@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ToolBar extends JFrame {
-    Dimension dim = new Dimension(300, 300);
+    Dimension dim = new Dimension(500, 250);
 
     ToolBar(String title, String[] icons){
         super(title);
@@ -27,7 +27,6 @@ public class ToolBar extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(panel);
         setVisible(true);
-        pack();
     }
 
     JButton[] createButtons(String[] icons){
